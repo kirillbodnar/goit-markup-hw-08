@@ -1,0 +1,21 @@
+.modal-btn {
+  display: flex;
+  display: block;
+  justify-items: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: inherit;
+  transition: fill 250ms var(--transition);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}

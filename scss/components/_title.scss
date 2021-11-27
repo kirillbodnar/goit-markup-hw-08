@@ -1,0 +1,61 @@
+.section1-header {
+  visibility: hidden;
+}
+
+.section2-header {
+  margin-bottom: 50px;
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+}
+
+.list-item-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-title-color);
+}
+
+//-------------------------------------------------
+
+.modal-form-header {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+}
+
+.portfolio-header {
+  visibility: hidden;
+}
+
+.section3-header {
+  margin-bottom: 50px;
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+}
+
+.header-icon {
+  margin-right: 10px;
+}
+
+.header-main {
+  border-bottom: 1px solid #ececec;
+}
+
+.portfolio-header {
+  visibility: hidden;
+}

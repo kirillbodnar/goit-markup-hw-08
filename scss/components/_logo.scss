@@ -1,0 +1,34 @@
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  font-family: Raleway;
+  font-style: normal;
+  color: #2196f3;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and(min-width:1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+.logo-color {
+  color: var(--main-title-color);
+}
+
+.logo-color-footer {
+  color: white;
+}

@@ -1,0 +1,48 @@
+.about-us-section {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.section2 {
+  display: flex;
+}
+
+.section2 .item {
+  position: relative;
+}
+
+.section2 .item + .item {
+  margin-left: 30px;
+}
+
+.section2-header {
+  margin-bottom: 50px;
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+}
+
+.about-us-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.about-us-box {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
