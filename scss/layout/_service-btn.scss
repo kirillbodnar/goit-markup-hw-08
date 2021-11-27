@@ -1,12 +1,26 @@
 .btn-list {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .btn-list .item + .item {
   margin-left: 8px;
+}
+
+.btn-list .item:nth-child(4) {
+  @media screen and (max-width: 767px) {
+    margin-left: 0px;
+  }
+}
+
+.btn-list .item:nth-child(-n + 3) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 8px;
+  }
 }
 
 .help-btn {
