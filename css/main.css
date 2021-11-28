@@ -35,6 +35,7 @@ h6 {
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 body {
@@ -275,16 +276,28 @@ img {
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 100%;
+  min-height: 581px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   background-color: white;
-  box-shadow: 1px, 0px, 2px rgba(0, 0, 0, 0.2), 1px, 0px, 1px rgba(0, 0, 0, 0.14), 3px, 0px, 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .modal-btn {
@@ -307,11 +320,81 @@ img {
   fill: var(--accent-color);
 }
 
+.modal-form-checkbox-label {
+  position: relative;
+  padding-left: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-checkbox-label {
+    padding-left: 0;
+  }
+}
+
+.modal-form-checkbox-label::before {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  cursor: pointer;
+  border: 2px solid var(--primery-title-color);
+  border-radius: 2px;
+  transition: border-color 250ms var(--transition-timing);
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form-checkbox-label::before {
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-checkbox-label::before {
+    position: static;
+  }
+}
+
+.modal-form-checkbox-label:hover::before {
+  border-color: var(--links-hover-color);
+}
+
+.modal-check-box:focus + .modal-form-checkbox-label::before {
+  border-color: var(--links-hover-color);
+}
+
+.modal-check-box:checked + .modal-form-checkbox-label::before {
+  border: none;
+  background-image: url(../img/check.svg);
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form-checkbox-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--primery-text-color);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-checkbox-label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
 .modal-form {
   display: flex;
   flex-direction: column;
-  width: 448px;
-  display: block;
 }
 
 .modal-form-header {
@@ -325,7 +408,7 @@ img {
 }
 
 .modal-form-field {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
@@ -420,7 +503,7 @@ img {
 }
 
 .modal-form-checkbox-label {
-  display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
@@ -447,10 +530,36 @@ img {
   border-radius: 2px;
 }
 
+@media screen and (min-width: 480px) {
+  .modal-form-checkbox-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-checkbox-label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
 .modal-form-link {
-  margin-left: 5px;
   text-decoration-line: underline;
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form-link {
+    margin-left: 5px;
+  }
 }
 
 .modal-btn {
@@ -639,6 +748,12 @@ img {
 .mobile-menu-button-icon {
   width: 24px;
   height: 16px;
+  transition: fill 250ms var(--transition);
+}
+
+.mobile-menu-button:hover .mobile-menu-button-icon,
+.mobile-menu-button:focus .mobile-menu-button-icon {
+  fill: var(--accent-color);
 }
 
 .mobile-menu {
@@ -650,8 +765,8 @@ img {
   width: 100vw;
   height: 100vh;
   padding: 48px 0 48px 40px;
-  background-color: var(--first-background-color);
-  transition: visibility 250ms var(--transition-timing), opacity 250ms var(--transition-timing);
+  background-color: white;
+  transition: visibility 250ms var(--transition), opacity 250ms var(--transition);
 }
 
 @media screen and (min-width: 768px) {
@@ -677,14 +792,14 @@ img {
 
 .mobile-menu-button-close:hover .mobile-menu-button-close-icon,
 .mobile-menu-button-close:focus .mobile-menu-button-close-icon {
-  fill: var(--links-hover-color);
+  fill: var(--accent-color);
 }
 
 .mobile-menu-button-close-icon {
-  width: 18px;
-  height: 18px;
-  fill: var(--primery-title-color);
-  transition: fill 250ms var(--transition-timing);
+  width: 11px;
+  height: 11px;
+  fill: var(--main-title-color);
+  transition: fill 250ms var(--transition);
 }
 
 .mobile-contacts-wrapper {
@@ -701,12 +816,12 @@ img {
   font-size: 8vw;
   line-height: 1.76;
   letter-spacing: 0.02em;
-  color: var(--primery-title-color);
-  transition: color 250ms var(--transition-timing);
+  color: var(--main-title-color);
+  transition: color 250ms var(--transition);
 }
 
 .mobile-navigation-link:hover, .mobile-navigation-link:focus {
-  color: var(--links-hover-color);
+  color: var(--accent-color);
 }
 
 @media screen and (min-width: 480px) {
@@ -716,7 +831,7 @@ img {
 }
 
 .mobile-navigation-link.mob-current {
-  color: var(--links-hover-color);
+  color: var(--accent-color);
 }
 
 .mobile-contacts {
@@ -732,7 +847,7 @@ img {
   font-size: 8vw;
   line-height: 1.78;
   letter-spacing: 0.02em;
-  color: var(--links-hover-color);
+  color: var(--accent-color);
 }
 
 @media screen and (min-width: 480px) {
@@ -777,7 +892,7 @@ img {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: var(--links-hover-color);
+  color: var(--accent-color);
 }
 
 .overlay {
@@ -874,16 +989,12 @@ img {
 
 .icon-box {
   display: flex;
+  min-height: 120px;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  min-height: 120px;
-  background-color: var(--thirdly-background-color);
   border-radius: 4px;
-}
-
-.icon-box svg {
-  display: flex;
+  background-color: var(--thirdly-background-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -893,6 +1004,10 @@ img {
     margin-left: -30px;
     padding-bottom: 0px;
   }
+}
+
+.benefits-section {
+  padding-bottom: 0px;
 }
 
 .section1 .item {

@@ -147,4 +147,10 @@
 .mobile-menu-button-icon {
   width: 24px;
   height: 16px;
+  transition: fill 250ms var(--transition);
+
+  .mobile-menu-button:hover &,
+  .mobile-menu-button:focus & {
+    fill: var(--accent-color);
+  }
 }

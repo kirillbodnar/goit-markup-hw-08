@@ -7,9 +7,9 @@
   width: 100vw;
   height: 100vh;
   padding: 48px 0 48px 40px;
-  background-color: var(--first-background-color);
-  transition: visibility 250ms var(--transition-timing),
-    opacity 250ms var(--transition-timing);
+  background-color: white;
+  transition: visibility 250ms var(--transition),
+    opacity 250ms var(--transition);
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -30,14 +30,14 @@
   background-color: transparent;
   &:hover .mobile-menu-button-close-icon,
   &:focus .mobile-menu-button-close-icon {
-    fill: var(--links-hover-color);
+    fill: var(--accent-color);
   }
 }
 .mobile-menu-button-close-icon {
-  width: 18px;
-  height: 18px;
-  fill: var(--primery-title-color);
-  transition: fill 250ms var(--transition-timing);
+  width: 11px;
+  height: 11px;
+  fill: var(--main-title-color);
+  transition: fill 250ms var(--transition);
 }
 
 .mobile-contacts-wrapper {
@@ -53,11 +53,11 @@
   font-size: 8vw;
   line-height: 1.76;
   letter-spacing: 0.02em;
-  color: var(--primery-title-color);
-  transition: color 250ms var(--transition-timing);
+  color: var(--main-title-color);
+  transition: color 250ms var(--transition);
   &:hover,
   &:focus {
-    color: var(--links-hover-color);
+    color: var(--accent-color);
   }
   @media screen and (min-width: 480px) {
     font-size: 40px;
@@ -65,7 +65,7 @@
 }
 
 .mobile-navigation-link.mob-current {
-  color: var(--links-hover-color);
+  color: var(--accent-color);
 }
 .mobile-contacts {
   margin-bottom: 64px;
@@ -78,7 +78,7 @@
   font-size: 8vw;
   line-height: 1.78;
   letter-spacing: 0.02em;
-  color: var(--links-hover-color);
+  color: var(--accent-color);
   @media screen and (min-width: 480px) {
     font-size: 34px;
   }
@@ -117,5 +117,5 @@
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: var(--links-hover-color);
+  color: var(--accent-color);
 }

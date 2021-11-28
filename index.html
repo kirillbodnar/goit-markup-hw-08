@@ -57,7 +57,7 @@
             >
           </li>
         </ul>
-        <button class="mobile-menu-button" type="button">
+        <button class="mobile-menu-button mob-menu--open" type="button">
           <svg class="mobile-menu-button-icon">
             <use href="./images/symbol-defs.svg#icon-menu"></use>
           </svg>
@@ -66,51 +66,55 @@
       <div class="mobile-menu mob-menu is-hidden">
         <button class="mobile-menu-button-close mob-menu--close" type="button">
           <svg class="mobile-menu-button-close-icon">
-            <use href="./img/icons.svg#icon-close"></use>
+            <use href="./images/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
         <nav class="mobile-navigation">
-          <ul class="mobile-navigation-list">
+          <ul class="mobile-navigation-list list">
             <li class="mobile-navigation-item">
-              <a class="mobile-navigation-link mob-current" href="./index.html"
+              <a
+                class="mobile-navigation-link link mob-current"
+                href="./index.html"
                 >Студия</a
               >
             </li>
             <li class="mobile-navigation-item">
-              <a class="mobile-navigation-link" href="./portfolio.html"
+              <a class="mobile-navigation-link link" href="./portfolio.html"
                 >Портфолио</a
               >
             </li>
             <li class="mobile-navigation-item">
-              <a class="mobile-navigation-link" href="">Контакты</a>
+              <a class="mobile-navigation-link link" href="">Контакты</a>
             </li>
           </ul>
         </nav>
         <div class="mobile-contacts-wrapper">
           <ul class="mobile-contacts">
             <li class="mobile-contacts-item">
-              <a class="mobile-contacts-phone" href="tel:+380961111111"
+              <a class="mobile-contacts-phone link" href="tel:+380961111111"
                 >+38 096 111 11 11</a
               >
             </li>
             <li class="mobile-contacts-item">
-              <a class="mobile-contacts-email" href="mailto:info@devstudio.com"
+              <a
+                class="mobile-contacts-email link"
+                href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
           </ul>
-          <ul class="mobile-social">
+          <ul class="mobile-social list">
             <li class="mobile-social-item">
-              <a class="mobile-social-link" href="">Instagram</a>
+              <a class="mobile-social-link link" href="">Instagram</a>
             </li>
             <li class="mobile-social-item">
-              <a class="mobile-social-link" href="">Twitter</a>
+              <a class="mobile-social-link link" href="">Twitter</a>
             </li>
             <li class="mobile-social-item">
-              <a class="mobile-social-link" href="">Facebook</a>
+              <a class="mobile-social-link link" href="">Facebook</a>
             </li>
             <li class="mobile-social-item">
-              <a class="mobile-social-link" href="">LinkedIn</a>
+              <a class="mobile-social-link link" href="">LinkedIn</a>
             </li>
           </ul>
         </div>
@@ -126,7 +130,7 @@
           </button>
         </div>
       </section>
-      <section class="section1 section">
+      <section class="section benefits-section">
         <div class="container">
           <h2 class="section1-header visually-hidden">Наши преимущества</h2>
           <ul class="list section1">
@@ -186,23 +190,55 @@
           <h2 class="section2-header">Чем мы занимаемся</h2>
           <ul class="list section2">
             <li class="item">
-              <img src="images/box1.jpg" alt="Верстка" width="370" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/box/box1.webp    1x,
+                    ./images/box/box1@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/box/box1.jpg 1x, ./images/box/box1@2x.jpg 2x"
+                />
+                <img src="#" alt="Разработка приложений" />
+              </picture>
               <div class="about-us-box">
                 <p class="about-us-text">Десктопные приложения</p>
               </div>
             </li>
             <li class="item">
-              <img
-                src="images/box2.jpg"
-                alt="Настройка веб сайта"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/box/box2.webp    1x,
+                    ./images/box/box2@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/box/box2.jpg 1x, ./images/box/box2@2x.jpg 2x"
+                />
+                <img src="#" alt="Мобильные приложения" />
+              </picture>
               <div class="about-us-box">
                 <p class="about-us-text">Мобильные приложения</p>
               </div>
             </li>
             <li class="item">
-              <img src="images/box3.jpg" alt="Дизайн" width="370" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/box/box3.webp    1x,
+                    ./images/box/box3@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/box/box3.jpg 1x, ./images/box/box3@2x.jpg 2x"
+                />
+                <img src="#" alt="Дизайн" />
+              </picture>
               <div class="about-us-box">
                 <p class="about-us-text">Дизайнерские решения</p>
               </div>
@@ -791,6 +827,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
