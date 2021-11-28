@@ -14,12 +14,16 @@
 }
 
 .modal-form-field {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
   color: var(--main-text-color);
   display: block;
+
+  & .modal-form-message {
+    margin-bottom: 10px;
+  }
 }
 
 .modal-field:nth-child(4) {

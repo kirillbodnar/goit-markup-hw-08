@@ -408,12 +408,16 @@ img {
 }
 
 .modal-form-field {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
   color: var(--main-text-color);
   display: block;
+}
+
+.modal-form-field .modal-form-message {
+  margin-bottom: 10px;
 }
 
 .modal-field:nth-child(4) {
@@ -830,7 +834,7 @@ img {
   }
 }
 
-.mobile-navigation-link.mob-current {
+.mobile-navigation-link.mobile-current {
   color: var(--accent-color);
 }
 
@@ -1491,6 +1495,13 @@ img {
 @media screen and (min-width: 768px) {
   .btn-list {
     justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .btn-list {
+    margin-bottom: 50px;
   }
 }
 
@@ -1629,6 +1640,7 @@ img {
 .help-box-link {
   display: flex;
   flex-direction: column;
+  flex-basis: 370px;
 }
 
 .help-box-link:hover .service-box-text {

@@ -83,7 +83,7 @@
 .help-box-link {
   display: flex;
   flex-direction: column;
-
+  flex-basis: 370px;
   &:hover .service-box-text {
     transform: translateY(-100%);
   }
