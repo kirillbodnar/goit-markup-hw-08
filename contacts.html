@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts - WebStudio</title>
+    <!-- Google Fonts and Normalize CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header-main">
+      <div class="container header-container nav-pos">
+        <nav>
+          <div class="nav-pos">
+            <a href="index.html" lang="en" class="link logo">
+              Web<span class="link logo-color">Studio</span>
+            </a>
+            <ul class="nav header__nav">
+              <li class="nav__item">
+                <a href="index.html" class="nav__link">Studio</a>
+              </li>
+              <li class="nav__item">
+                <a href="portfolio.html" class="nav__link">Portfolio</a>
+              </li>
+              <li class="nav__item">
+                <a href="contacts.html" class="nav__link current">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <ul class="nav-contacts">
+          <li class="nav-contacts__item">
+            <a class="nav-contacts__link" href="mailto:info@devstudio.com">
+              <svg width="16px" height="20px" class="header-icon">
+                <use href="./images/symbol-defs.svg#icon-mail"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="nav-contacts__item">
+            <a class="nav-contacts__link" href="tel:+380961111111">
+              <svg width="10px" height="17px" class="header-icon">
+                <use href="./images/symbol-defs.svg#icon-phone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+        <button class="mobile-menu-button mob-menu--open" type="button">
+          <svg class="mobile-menu-button-icon">
+            <use href="./images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu mob-menu is-hidden">
+        <button class="mobile-menu-button-close mob-menu--close" type="button">
+          <svg class="mobile-menu-button-close-icon">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="mobile-navigation">
+          <ul class="mobile-navigation-list list">
+            <li class="mobile-navigation-item">
+              <a class="mobile-navigation-link link" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li class="mobile-navigation-item">
+              <a class="mobile-navigation-link link" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mobile-navigation-item">
+              <a class="mobile-navigation-link link" href="contacts.html"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="mobile-contacts-wrapper">
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts-item">
+              <a class="mobile-contacts-phone link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts-item">
+              <a
+                class="mobile-contacts-email link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-social list">
+            <li class="mobile-social-item">
+              <a class="mobile-social-link link" href="">Instagram</a>
+            </li>
+            <li class="mobile-social-item">
+              <a class="mobile-social-link link" href="">Twitter</a>
+            </li>
+            <li class="mobile-social-item">
+              <a class="mobile-social-link link" href="">Facebook</a>
+            </li>
+            <li class="mobile-social-item">
+              <a class="mobile-social-link link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="section contacts-section">
+        <div class="container">
+          <!-- Only the form remains -->
+          <div
+            class="contacts-wrapper"
+            style="display: flex; flex-wrap: wrap; gap: 40px"
+          >
+            <div class="contact-form" style="flex: 1; min-width: 300px">
+              <h2>Send Us a Message</h2>
+              <form action="#" class="form">
+                <div class="form-group" style="margin-bottom: 15px">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                    style="width: 100%; padding: 10px"
+                  />
+                </div>
+                <div class="form-group" style="margin-bottom: 15px">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                    style="width: 100%; padding: 10px"
+                  />
+                </div>
+                <div class="form-group" style="margin-bottom: 15px">
+                  <label for="subject">Subject</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Subject"
+                    required
+                    style="width: 100%; padding: 10px"
+                  />
+                </div>
+                <div class="form-group" style="margin-bottom: 15px">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Your Message"
+                    rows="5"
+                    required
+                    style="width: 100%; padding: 10px"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="form-btn"
+                  style="padding: 10px 20px"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-items">
+        <div class="footer-wrap">
+          <div class="footer-inf">
+            <a href="index.html" lang="en" class="link logo footer-logo">
+              Web<span class="link logo-color-footer">Studio</span>
+            </a>
+            <address class="footer-address">
+              <ul class="list address-margin">
+                <li class="item">
+                  <p>Kyiv, Lesi Ukrainky Avenue, 26</p>
+                </li>
+                <li class="item">
+                  <a class="footer-info link" href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="item">
+                  <a class="footer-info link" href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="join-us-container">
+            <h3 class="footer-social-title">JOIN US</h3>
+            <ul class="team-social social-list list">
+              <li class="social-item">
+                <a href="" class="social-link footer-social-link link">
+                  <svg class="social-icon" width="20px" height="20px">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item">
+                <a href="" class="social-link footer-social-link link">
+                  <svg class="social-icon" width="20px" height="20px">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item">
+                <a href="" class="social-link footer-social-link link">
+                  <svg class="social-icon" width="20px" height="20px">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-item">
+                <a href="" class="social-link footer-social-link link">
+                  <svg class="social-icon" width="20px" height="20px">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="subscribe-section">
+          <h3 class="footer-social-title">Subscribe to the newsletter</h3>
+          <form
+            class="footer-form"
+            name="signup-form"
+            autocomplete="on"
+            novalidate
+          >
+            <div class="subscribe-form-container">
+              <label for="email" class="subscribe-form-label">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="subscribe-form-input"
+                  placeholder="E-mail"
+                />
+              </label>
+              <button type="submit" class="form-btn">
+                Subscribe
+                <svg class="form-btn-icon" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/mobile-menu.js"></script>
+  </body>
+</html>
